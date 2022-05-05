@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.AjouterTypeHebergementController">
+    <children>
+        <Label layoutX="14.0" layoutY="166.0" prefHeight="34.0" prefWidth="275.0" text="Nom Type Hebergement :">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfNom_type_hbrg" layoutX="293.0" layoutY="168.0" prefHeight="31.0" prefWidth="298.0" />
+        <Button layoutX="316.0" layoutY="324.0" mnemonicParsing="false" onAction="#ajouterTypeHebergement" prefHeight="31.0" prefWidth="87.0" text="Valider" textAlignment="CENTER" />
+        <Button layoutX="202.0" layoutY="324.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="31.0" prefWidth="87.0" text="Cancel" />
+        <Button layoutX="382.0" layoutY="35.0" mnemonicParsing="false" onAction="#MenuTypeHebergement" prefHeight="31.0" prefWidth="203.0" text="Menu Type Hebergement" />
+
+    </children>
+</AnchorPane>

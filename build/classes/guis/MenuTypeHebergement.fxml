@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.MenuTypeHebergementController">
+    
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="775.0">
+            <children>
+                <Label layoutX="214.0" layoutY="26.0" prefHeight="43.0" prefWidth="197.0" textFill="#5c235b">
+                    <font>
+                        <Font name="System Bold Italic" size="29.0" />
+                    </font>
+                </Label>
+                <Label layoutX="313.0" layoutY="40.0" text="Bienvenue dans l'espace admin">
+                    <font>
+                        <Font name="System Bold" size="27.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="-21.0" layoutY="-5.0" prefHeight="582.0" prefWidth="281.0" style="-fx-background-color: #01122C;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/Tabaani%20Full%20Logo.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView blendMode="COLOR_DODGE" fitHeight="33.0" fitWidth="49.0" layoutX="41.0" layoutY="356.0" onMousePressed="#hebergementMenu" pickOnBounds="true">
+                            <image>
+                                <Image url="@../images/png-transparent-hotel-accommodation-hotel-text-logo-sign.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <Button id="gestUsers" layoutX="75.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Users">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestVoy" layoutX="75.0" layoutY="289.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Trip">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestHeb" fx:id="hebergement" layoutX="75.0" layoutY="346.0" mnemonicParsing="false" onAction="#hebergementMenu" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accomodation">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestEvent" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Blog ">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestCarte" layoutX="69.0" layoutY="467.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Event">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestUsers" layoutX="75.0" layoutY="172.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accueil">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="386.0" layoutY="296.0" onAction="#add" prefHeight="50.0" prefWidth="250.0" text="+ Add type Hebergements">
+                    <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Label alignment="CENTER" layoutX="270.0" layoutY="215.0" prefHeight="59.0" prefWidth="482.0" text="Menu Type Hebergement" textAlignment="CENTER" textFill="#17965b">
+                    <font>
+                        <Font name="Bodoni MT Bold" size="36.0" />
+                    </font>
+                </Label>
+                <Button layoutX="386.0" layoutY="364.0" onAction="#list" prefHeight="50.0" prefWidth="250.0" text="- List type Hebergements">
+                    <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="694.0" layoutY="519.0" mnemonicParsing="false" text="Quitter" />
+                <Button layoutX="527.0" layoutY="519.0" onAction="#MenuPrincipale" text="Menu Principale">
+                    <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ListHebergementController">
+    
+    <children>
+        <TableView fx:id="ListHebergements" layoutX="19.0" layoutY="211.0" prefHeight="266.0" prefWidth="972.0">
+            <columns>
+                <TableColumn fx:id="nom_hbrg" prefWidth="100.0" text="Nom" />
+                <TableColumn fx:id="adresse_hbrg" prefWidth="103.0" text="Adresse" />
+                <TableColumn fx:id="type_hbrg" prefWidth="68.0" text="Type" />
+                <TableColumn fx:id="num_place_hbrg" prefWidth="62.0" text="Place" />
+                <TableColumn fx:id="prix_hbrg" prefWidth="83.0" text="Prix" />
+                <TableColumn fx:id="prop_hbrg" prefWidth="134.0" text="Proprietaire" />
+                <TableColumn fx:id="date_hbrg" prefWidth="104.0" text="Date" />
+            <TableColumn fx:id="img_hbrg" prefWidth="149.0" text="Image" />
+                <TableColumn fx:id="modifier" prefWidth="81.0" text="Modifier" />
+                <TableColumn fx:id="supprimer" minWidth="1.0" prefWidth="87.0" text="Supprimer" />
+            </columns>
+        </TableView>
+        <Label layoutX="346.0" layoutY="60.0" text="List Hebergements" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="749.0" layoutY="21.0" mnemonicParsing="false" onAction="#MenuHebergement" text="Menu Hebergement" />
+      <TextField fx:id="tfsearchNom" layoutX="56.0" layoutY="142.0" onKeyPressed="#searchNom" onKeyReleased="#searchNom" onKeyTyped="#searchNom" />
+      <ComboBox fx:id="cbSearchType" layoutX="293.0" layoutY="142.0" onMouseDragExited="#searchType" onMouseDragReleased="#searchType" prefWidth="150.0" />
+      <ComboBox fx:id="cbSearchProp" layoutX="494.0" layoutY="142.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbox" layoutX="874.0" layoutY="152.0" onAction="#TrierHbrg" prefHeight="31.0" prefWidth="96.0" />
+      <Label layoutX="804.0" layoutY="157.0" text="Trier Par :" />
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="959.0" layoutY="190.0" onTouchPressed="#Refresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1200px-Refresh_icon.svg.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
