@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.HebergementUtilisateurController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1030.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.HebergementUtilisateurController">
                  
-                  <HBox alignment="CENTER" layoutX="40.0" layoutY="73.0" prefHeight="248.0" prefWidth="1225.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" layoutX="40.0" layoutY="73.0" prefHeight="301.0" prefWidth="1225.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <ScrollPane fx:id="scroll" prefHeight="195.0" prefWidth="927.0" styleClass="transparent" stylesheets="@../guis/style/style.css">
+                        <ScrollPane fx:id="scroll" prefHeight="314.0" prefWidth="927.0" styleClass="transparent" stylesheets="@../guis/style/style.css">
                            <content>
                               <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
                                  <rowConstraints>
@@ -29,7 +29,7 @@
                         </ScrollPane>
                      </children>
                   </HBox>
-   <ScrollPane fx:id="scroll1" layoutX="87.0" layoutY="377.0" prefHeight="163.0" prefWidth="1117.0" styleClass="transparent" stylesheets="@../guis/style/style.css">
+   <ScrollPane fx:id="scroll1" layoutX="94.0" layoutY="447.0" prefHeight="223.0" prefWidth="1117.0" styleClass="transparent" stylesheets="@../guis/style/style.css">
       <content>
          <GridPane fx:id="grid1" prefHeight="0.0" prefWidth="0.0">
             <rowConstraints>
@@ -38,7 +38,7 @@
          </GridPane>
       </content>
    </ScrollPane>
-   <ScrollPane fx:id="scroll2" layoutX="106.0" layoutY="600.0" prefHeight="163.0" prefWidth="1093.0" styleClass="transparent" stylesheets="@../guis/style/style.css">
+   <ScrollPane fx:id="scroll2" layoutX="94.0" layoutY="726.0" prefHeight="257.0" prefWidth="1093.0" styleClass="transparent" stylesheets="@../guis/style/style.css">
       <content>
          <GridPane fx:id="grid2" prefHeight="0.0" prefWidth="0.0">
             <rowConstraints>
@@ -52,12 +52,12 @@
          <Font size="24.0" />
       </font>
    </Label>
-   <Label layoutX="54.0" layoutY="324.0" text="Mes Reservations :">
+   <Label layoutX="54.0" layoutY="394.0" text="Mes Reservations :">
       <font>
          <Font size="24.0" />
       </font>
    </Label>
-   <Label layoutX="54.0" layoutY="557.0" text="Mes Reservations Precendentes :">
+   <Label layoutX="54.0" layoutY="674.0" text="Mes Reservations Precendentes :">
       <font>
          <Font size="24.0" />
       </font>

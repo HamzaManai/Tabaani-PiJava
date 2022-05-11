@@ -24,15 +24,14 @@ public class FXMAIN extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-   //    FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/MenuBack.fxml"));
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/MenuBack.fxml"));
         //  FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListHebergementUtilisateur.fxml"));
-       // FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListHebergement.fxml"));
-       //  FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListProprietaire.fxml"));
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListHebergement.fxml"));
+        //  FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListProprietaire.fxml"));
         //  FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/DashboardAdmin.fxml"));
 
-        
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListHebergementUtilisateur.fxml"));
-                // FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/AjouterHebergementUtilisateur.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/ListHebergementUtilisateur.fxml"));
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("../guis/AjouterHebergementUtilisateur.fxml"));
 
         Parent root = loader.load();
         Scene scene = new Scene(root);

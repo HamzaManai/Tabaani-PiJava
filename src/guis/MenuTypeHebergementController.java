@@ -8,6 +8,8 @@ package guis;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,12 +52,15 @@ public class MenuTypeHebergementController implements Initializable {
         Parent root = loader.load();
         AjouterTypeHebergementController ac = loader.getController();
          */
+ 
         Parent root = FXMLLoader.load(getClass().getResource("AjouterTypeHebergement.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+         
 
+       // loadPage("AjouterTypeHebergement");
     }
 
     @FXML
@@ -93,6 +98,17 @@ public class MenuTypeHebergementController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void loadPage(String page) {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource(page + ".fxml"));
+        } catch (IOException ex) {
+            Logger.getLogger(MenuBackController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        rootpane.setClip(root);
+
     }
 
 }

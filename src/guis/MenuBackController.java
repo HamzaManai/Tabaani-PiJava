@@ -8,6 +8,8 @@ package guis;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -88,6 +90,7 @@ public class MenuBackController implements Initializable {
 
     @FXML
     private void hebergementMenu(ActionEvent event) throws IOException {
+        
         Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

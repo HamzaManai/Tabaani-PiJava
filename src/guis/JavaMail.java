@@ -90,7 +90,7 @@ public class JavaMail {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication(from, "Zayani321");
+                return new PasswordAuthentication(from, "");
 
             }
 

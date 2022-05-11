@@ -36,6 +36,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import services.ServiceHebergement;
@@ -76,6 +77,8 @@ public class AjouterHebergementController implements Initializable {
     String filename = null;
     String filepath = null;
     String uploads = "D:\\Esprit\\pidev\\Java\\Essay1Java\\src\\uploads\\";
+    @FXML
+    private Button hebergement;
 
     /**
      * Initializes the controller class.
@@ -117,12 +120,12 @@ public class AjouterHebergementController implements Initializable {
         } else if (dpDate_hbrg.getValue().isBefore(java.time.LocalDate.now())) {
             Alert a = new Alert(Alert.AlertType.ERROR, "Verifier la date ", ButtonType.OK);
             a.showAndWait();
-            
-        } else if (cbProprietaire.getValue() == null ) {
+
+        } else if (cbProprietaire.getValue() == null) {
             ServiceHebergement sh = new ServiceHebergement();
 
             Hebergement h = new Hebergement(Integer.parseInt(tfNbr_place_hbrg.getText()), Integer.parseInt(tfPrix_hbrg.getText()), tfNom_hbrg.getText(),
-                    tfAdresse_hbrg.getText(), dpDate_hbrg.getValue(), cbType_hbrg.getValue(),filename);
+                    tfAdresse_hbrg.getText(), dpDate_hbrg.getValue(), cbType_hbrg.getValue(), filename);
             sh.ajouter(h);
             Alert a = new Alert(Alert.AlertType.INFORMATION, "hebergement ajoutée avec success Sans Proprietaire !", ButtonType.OK);
             a.showAndWait();
@@ -131,7 +134,7 @@ public class AjouterHebergementController implements Initializable {
             ServiceHebergement sh = new ServiceHebergement();
 
             Hebergement h = new Hebergement(Integer.parseInt(tfNbr_place_hbrg.getText()), Integer.parseInt(tfPrix_hbrg.getText()), tfNom_hbrg.getText(),
-                    tfAdresse_hbrg.getText(), dpDate_hbrg.getValue(), cbProprietaire.getValue(), cbType_hbrg.getValue(),filename);
+                    tfAdresse_hbrg.getText(), dpDate_hbrg.getValue(), cbProprietaire.getValue(), cbType_hbrg.getValue(), filename);
             sh.ajouterHebergementProprietaire(h);
             Alert a = new Alert(Alert.AlertType.INFORMATION, "hebergement ajoutée avec success Avec Proprietaire !", ButtonType.OK);
             a.showAndWait();
@@ -203,6 +206,24 @@ public class AjouterHebergementController implements Initializable {
         cbType_hbrg.setValue(null);
         dpDate_hbrg.setValue(null);
         cbProprietaire.setValue(null);
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

@@ -119,6 +119,8 @@ public class ListProprietaireController implements Initializable {
     private Button btnExcel;
     @FXML
     private Button btnPdf1;
+    @FXML
+    private Button hebergement;
 
     /**
      * Initializes the controller class.
@@ -449,5 +451,23 @@ public class ListProprietaireController implements Initializable {
         pst.close();
         rs.close();
 
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

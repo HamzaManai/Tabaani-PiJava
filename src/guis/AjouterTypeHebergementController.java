@@ -19,8 +19,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javax.swing.JOptionPane;
@@ -42,6 +44,8 @@ public class AjouterTypeHebergementController implements Initializable {
 
     @FXML
     private TextField tfNom_type_hbrg;
+    @FXML
+    private Button hebergement;
 
     /**
      * Initializes the controller class.
@@ -122,6 +126,24 @@ public class AjouterTypeHebergementController implements Initializable {
     @FXML
     private void Cancel(ActionEvent event) {
         tfNom_type_hbrg.setText("");
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+                Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event) throws IOException {
+                Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

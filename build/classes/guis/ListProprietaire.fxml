@@ -11,10 +11,69 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="myAnchorPane" prefHeight="400.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ListProprietaireController">
+<AnchorPane id="AnchorPane" fx:id="myAnchorPane" prefHeight="577.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ListProprietaireController">
     
     <children>
-        <TableView fx:id="ListProprietaires" layoutX="16.0" layoutY="146.0" prefHeight="200.0" prefWidth="671.0">
+        
+        
+        
+                        <Label layoutX="422.0" layoutY="52.0" text="Bienvenue dans l'espace admin">
+                    <font>
+                        <Font name="System Bold" size="27.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="-21.0" layoutY="-5.0" prefHeight="582.0" prefWidth="281.0" style="-fx-background-color: #01122C;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/Tabaani%20Full%20Logo.png" />
+                            </image>
+                        </ImageView>
+                      <ImageView blendMode="COLOR_DODGE" fitHeight="33.0" fitWidth="49.0" layoutX="41.0" layoutY="356.0" onMousePressed="#hebergementMenu" pickOnBounds="true">
+                          <image>
+                              <Image url="@../images/png-transparent-hotel-accommodation-hotel-text-logo-sign.png" />
+                          </image>
+                      </ImageView>
+                    </children>
+                </AnchorPane>
+                <Button id="gestUsers" layoutX="75.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Users">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestVoy" layoutX="75.0" layoutY="289.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Trip">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestHeb" fx:id="hebergement" layoutX="75.0" layoutY="346.0" mnemonicParsing="false" onAction="#hebergementMenu" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accomodation">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestEvent" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Blog ">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestCarte" layoutX="69.0" layoutY="467.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Event">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestUsers" layoutX="75.0" layoutY="172.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accueil">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+
+                  <Button layoutX="870.0" layoutY="504.0" mnemonicParsing="false" text="Quitter" />
+             
+        
+        
+        
+        
+        <TableView fx:id="ListProprietaires" layoutX="284.0" layoutY="268.0" prefHeight="200.0" prefWidth="671.0">
             <columns>
                 <TableColumn fx:id="nom_prop" prefWidth="81.0" text="Nom" />
                 <TableColumn fx:id="prenom_prop" prefWidth="79.0" text="Prenom" />
@@ -25,25 +84,25 @@
                 <TableColumn fx:id="supprimer" minWidth="1.0" prefWidth="79.0" text="Supprimer" />
             </columns>
         </TableView>
-        <Label layoutX="284.0" layoutY="47.0" text="List Proprietaires" textAlignment="CENTER">
+        <Label layoutX="548.0" layoutY="159.0" text="List Proprietaires" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <ImageView fitHeight="19.0" fitWidth="27.0" layoutX="659.0" layoutY="120.0" onMouseClicked="#Refresh" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="19.0" fitWidth="27.0" layoutX="922.0" layoutY="243.0" onMouseClicked="#Refresh" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../images/1200px-Refresh_icon.svg.png" />
             </image>
         </ImageView>
-        <MenuButton fx:id="menuButton" layoutX="40.0" layoutY="79.0" mnemonicParsing="false" onAction="#Trier" prefHeight="25.0" prefWidth="145.0" text="Trier">
+        <MenuButton fx:id="menuButton" layoutX="313.0" layoutY="213.0" mnemonicParsing="false" onAction="#Trier" prefHeight="25.0" prefWidth="145.0" text="Trier">
             <items>
                 <MenuItem fx:id="trierNom" mnemonicParsing="false" onAction="#trierNom" text="Trier par nom" />
                 <MenuItem fx:id="tierDate" mnemonicParsing="false" onAction="#trierPrenom" text="Trier par Prenom" />
                 <MenuItem fx:id="trierEmail" mnemonicParsing="false" onAction="#trierEmail" text="Trier par Email" />
             </items>
         </MenuButton>
-        <Button layoutX="529.0" layoutY="29.0" mnemonicParsing="false" onAction="#MenuProprietaire" text="Menu Proprietaire" />
-      <Button fx:id="btnExcel" layoutX="514.0" layoutY="104.0" mnemonicParsing="false" onAction="#Excel" text="EXCEL" />
-      <Button fx:id="btnPdf1" layoutX="587.0" layoutY="104.0" mnemonicParsing="false" onAction="#pdf" text="PDF" />
+        <Button layoutX="776.0" layoutY="157.0" mnemonicParsing="false" onAction="#MenuProprietaire" text="Menu Proprietaire" />
+      <Button fx:id="btnExcel" layoutX="776.0" layoutY="228.0" mnemonicParsing="false" onAction="#Excel" text="EXCEL" />
+      <Button fx:id="btnPdf1" layoutX="846.0" layoutY="228.0" mnemonicParsing="false" onAction="#pdf" text="PDF" />
     </children>
 </AnchorPane>

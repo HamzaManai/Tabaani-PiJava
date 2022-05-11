@@ -45,6 +45,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TouchEvent;
 import services.ServiceProprietaire;
 import services.ServiceTypeHebergement;
@@ -97,6 +98,8 @@ public class ListHebergementController implements Initializable {
     private TableColumn<Hebergement, String> img_hbrg;
     @FXML
     private ComboBox<String> cbox;
+    @FXML
+    private Button hebergement;
 
     /**
      * Initializes the controller class.
@@ -316,7 +319,7 @@ public class ListHebergementController implements Initializable {
         }
         if (s.equals("Par Prix ↓")) {
             list.clear();
-            list = null ;
+            list = null;
             ListHebergements.setItems(list);
             nom_hbrg.setCellValueFactory(new PropertyValueFactory<Hebergement, String>("nom_hbrg"));
             adresse_hbrg.setCellValueFactory(new PropertyValueFactory<Hebergement, String>("adresse_hbrg"));
@@ -361,6 +364,24 @@ public class ListHebergementController implements Initializable {
     private void Refresh(TouchEvent event) {
         list = (ObservableList<Hebergement>) sh.getAll();
         ListHebergements.setItems(list);
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

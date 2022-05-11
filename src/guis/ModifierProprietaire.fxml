@@ -7,41 +7,103 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ModifierProprietaireController">
+
+<AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="962.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="guis.ModifierProprietaireController">
     <children>
-        <Label layoutX="14.0" layoutY="150.0" prefHeight="34.0" prefWidth="275.0" text="Nom Propreitaire :">
+        
+        
+        
+        <Label layoutX="422.0" layoutY="52.0" text="Bienvenue dans l'espace admin">
+            <font>
+                <Font name="System Bold" size="27.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-21.0" layoutY="-5.0" prefHeight="582.0" prefWidth="281.0" style="-fx-background-color: #01122C;">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Tabaani%20Full%20Logo.png" />
+                    </image>
+                </ImageView>
+                <ImageView blendMode="COLOR_DODGE" fitHeight="33.0" fitWidth="49.0" layoutX="41.0" layoutY="356.0" onMousePressed="#hebergementMenu" pickOnBounds="true">
+                    <image>
+                        <Image url="@../images/png-transparent-hotel-accommodation-hotel-text-logo-sign.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Button id="gestUsers" layoutX="75.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Users">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button id="gestVoy" layoutX="75.0" layoutY="289.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Trip">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button id="gestHeb" fx:id="hebergement" layoutX="75.0" layoutY="346.0" mnemonicParsing="false" onAction="#hebergementMenu" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accomodation">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button id="gestEvent" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Blog ">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button id="gestCarte" layoutX="69.0" layoutY="467.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Event">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button id="gestUsers" layoutX="75.0" layoutY="172.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accueil">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+
+        <Button layoutX="870.0" layoutY="504.0" mnemonicParsing="false" text="Quitter" />
+             
+        
+        
+        
+        
+        
+        
+        <Label layoutX="304.0" layoutY="286.0" prefHeight="34.0" prefWidth="275.0" text="Nom Propreitaire :">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <TextField fx:id="tfNom_prop" layoutX="289.0" layoutY="152.0" prefHeight="31.0" prefWidth="298.0" />
-        <Button layoutX="324.0" layoutY="340.0" mnemonicParsing="false" onAction="#modifierrProprietaire" prefHeight="31.0" prefWidth="87.0" text="Modifier" textAlignment="CENTER" />
-        <Button layoutX="202.0" layoutY="340.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="31.0" prefWidth="87.0" text="Cancel" />
-        <Label layoutX="14.0" layoutY="200.0" prefHeight="34.0" prefWidth="275.0" text="Prenom Propreitaire :">
+        <TextField fx:id="tfNom_prop" layoutX="579.0" layoutY="288.0" prefHeight="31.0" prefWidth="298.0" />
+        <Button layoutX="614.0" layoutY="476.0" mnemonicParsing="false" onAction="#modifierrProprietaire" prefHeight="31.0" prefWidth="87.0" text="Modifier" textAlignment="CENTER" />
+        <Button layoutX="492.0" layoutY="476.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="31.0" prefWidth="87.0" text="Cancel" />
+        <Label layoutX="304.0" layoutY="336.0" prefHeight="34.0" prefWidth="275.0" text="Prenom Propreitaire :">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <TextField fx:id="tfPrenom_prop" layoutX="289.0" layoutY="202.0" prefHeight="31.0" prefWidth="298.0" />
-        <Label layoutX="14.0" layoutY="245.0" prefHeight="34.0" prefWidth="275.0" text="Email Propreitaire :">
+        <TextField fx:id="tfPrenom_prop" layoutX="579.0" layoutY="338.0" prefHeight="31.0" prefWidth="298.0" />
+        <Label layoutX="304.0" layoutY="381.0" prefHeight="34.0" prefWidth="275.0" text="Email Propreitaire :">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <Label layoutX="14.0" layoutY="288.0" prefHeight="34.0" prefWidth="275.0" text="Numero Telephone :">
+        <Label layoutX="304.0" layoutY="424.0" prefHeight="34.0" prefWidth="275.0" text="Numero Telephone :">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <TextField fx:id="tfEmail_prop" layoutX="289.0" layoutY="247.0" prefHeight="31.0" prefWidth="298.0" />
-        <TextField fx:id="tfNum_tlf_pro" layoutX="289.0" layoutY="290.0" prefHeight="31.0" prefWidth="298.0" />
-        <ImageView fx:id="img_prop" fitHeight="92.0" fitWidth="87.0" layoutX="238.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+        <TextField fx:id="tfEmail_prop" layoutX="579.0" layoutY="383.0" prefHeight="31.0" prefWidth="298.0" />
+        <TextField fx:id="tfNum_tlf_pro" layoutX="579.0" layoutY="426.0" prefHeight="31.0" prefWidth="298.0" />
+        <ImageView fx:id="img_prop" fitHeight="92.0" fitWidth="87.0" layoutX="528.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../images/DefaultProp.png" />
             </image>
         </ImageView>
-        <Button fx:id="btnImage" layoutX="266.0" layoutY="108.0" mnemonicParsing="false" onAction="#Image_prop" prefHeight="10.0" prefWidth="30.0" text="..." />
-        <Button layoutX="438.0" layoutY="21.0" mnemonicParsing="false" onAction="#MenuProprietaire" prefHeight="31.0" prefWidth="154.0" text="Menu Proprietaire" />
+        <Button fx:id="btnImage" layoutX="556.0" layoutY="244.0" mnemonicParsing="false" onAction="#Image_prop" prefHeight="10.0" prefWidth="30.0" text="..." />
+        <Button layoutX="728.0" layoutY="157.0" mnemonicParsing="false" onAction="#MenuProprietaire" prefHeight="31.0" prefWidth="154.0" text="Menu Proprietaire" />
 
     </children> 
 </AnchorPane>

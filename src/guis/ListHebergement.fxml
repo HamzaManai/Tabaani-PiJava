@@ -11,10 +11,75 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ListHebergementController">
+<AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ListHebergementController">
     
     <children>
-        <TableView fx:id="ListHebergements" layoutX="19.0" layoutY="211.0" prefHeight="266.0" prefWidth="972.0">
+        
+        
+        
+        
+        
+        
+                        <Label layoutX="559.0" layoutY="43.0" text="Bienvenue dans l'espace admin">
+                    <font>
+                        <Font name="System Bold" size="27.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="-21.0" layoutY="-5.0" prefHeight="582.0" prefWidth="281.0" style="-fx-background-color: #01122C;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/Tabaani%20Full%20Logo.png" />
+                            </image>
+                        </ImageView>
+                      <ImageView blendMode="COLOR_DODGE" fitHeight="33.0" fitWidth="49.0" layoutX="41.0" layoutY="356.0" onMousePressed="#hebergementMenu" pickOnBounds="true">
+                          <image>
+                              <Image url="@../images/png-transparent-hotel-accommodation-hotel-text-logo-sign.png" />
+                          </image>
+                      </ImageView>
+                    </children>
+                </AnchorPane>
+                <Button id="gestUsers" layoutX="75.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Users">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestVoy" layoutX="75.0" layoutY="289.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Trip">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestHeb" fx:id="hebergement" layoutX="75.0" layoutY="346.0" mnemonicParsing="false" onAction="#hebergementMenu" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accomodation">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestEvent" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Blog ">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestCarte" layoutX="69.0" layoutY="467.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Event">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestUsers" layoutX="75.0" layoutY="172.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accueil">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+
+                  <Button layoutX="1174.0" layoutY="504.0" mnemonicParsing="false" text="Quitter" />
+             
+        
+        
+        
+        
+        
+        
+        
+        <TableView fx:id="ListHebergements" layoutX="282.0" layoutY="281.0" prefHeight="207.0" prefWidth="972.0">
             <columns>
                 <TableColumn fx:id="nom_hbrg" prefWidth="100.0" text="Nom" />
                 <TableColumn fx:id="adresse_hbrg" prefWidth="103.0" text="Adresse" />
@@ -28,18 +93,18 @@
                 <TableColumn fx:id="supprimer" minWidth="1.0" prefWidth="87.0" text="Supprimer" />
             </columns>
         </TableView>
-        <Label layoutX="346.0" layoutY="60.0" text="List Hebergements" textAlignment="CENTER">
+        <Label layoutX="609.0" layoutY="130.0" text="List Hebergements" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <Button layoutX="749.0" layoutY="21.0" mnemonicParsing="false" onAction="#MenuHebergement" text="Menu Hebergement" />
-      <TextField fx:id="tfsearchNom" layoutX="56.0" layoutY="142.0" onKeyPressed="#searchNom" onKeyReleased="#searchNom" onKeyTyped="#searchNom" />
-      <ComboBox fx:id="cbSearchType" layoutX="293.0" layoutY="142.0" onMouseDragExited="#searchType" onMouseDragReleased="#searchType" prefWidth="150.0" />
-      <ComboBox fx:id="cbSearchProp" layoutX="494.0" layoutY="142.0" prefWidth="150.0" />
-      <ComboBox fx:id="cbox" layoutX="874.0" layoutY="152.0" onAction="#TrierHbrg" prefHeight="31.0" prefWidth="96.0" />
-      <Label layoutX="804.0" layoutY="157.0" text="Trier Par :" />
-      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="959.0" layoutY="190.0" onTouchPressed="#Refresh" pickOnBounds="true" preserveRatio="true">
+        <Button layoutX="1053.0" layoutY="142.0" mnemonicParsing="false" onAction="#MenuHebergement" text="Menu Hebergement" />
+      <TextField fx:id="tfsearchNom" layoutX="319.0" layoutY="212.0" onKeyPressed="#searchNom" onKeyReleased="#searchNom" onKeyTyped="#searchNom" />
+      <ComboBox fx:id="cbSearchType" layoutX="556.0" layoutY="212.0" onMouseDragExited="#searchType" onMouseDragReleased="#searchType" prefWidth="150.0" />
+      <ComboBox fx:id="cbSearchProp" layoutX="757.0" layoutY="212.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbox" layoutX="1137.0" layoutY="222.0" onAction="#TrierHbrg" prefHeight="31.0" prefWidth="96.0" />
+      <Label layoutX="1067.0" layoutY="227.0" text="Trier Par :" />
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="1222.0" layoutY="260.0" onTouchPressed="#Refresh" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/1200px-Refresh_icon.svg.png" />
          </image>

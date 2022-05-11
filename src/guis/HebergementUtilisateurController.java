@@ -19,6 +19,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -66,26 +67,30 @@ public class HebergementUtilisateurController implements Initializable {
     ObservableList<Hebergement> list2 = FXCollections.observableArrayList(
             sh.listResvUtilPrec()
     );
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
         int column = 0;
         int row = 1;
         int column1 = 0;
         int row1 = 1;
         int column2 = 0;
         int row2 = 1;
+
         try {
             for (int i = 0; i < list.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("Hebergement.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("Hebergement2.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
-                HebergementController HebergementController = fxmlLoader.getController();
-                HebergementController.setData(list.get(i), myListener);
+                Hebergement2Controller Hebergement2Controller = fxmlLoader.getController();
+                Hebergement2Controller.setData(list.get(i), myListener);
+
 
                 if (column == 3) {
                     column = 0;
@@ -139,6 +144,7 @@ public class HebergementUtilisateurController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         /**
          * ******************************
          */

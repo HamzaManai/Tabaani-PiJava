@@ -30,6 +30,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import services.ServiceProprietaire;
@@ -63,6 +64,8 @@ public class ModifierProprietaireController implements Initializable {
     String filepath = null;
     String path = "D:\\Esprit\\pidev\\Java\\Essay1Java\\src\\uploads\\";
     private Proprietaire p;
+    @FXML
+    private Button hebergement;
 
     public void setA(Proprietaire a) {
         this.p = a;
@@ -187,6 +190,24 @@ public class ModifierProprietaireController implements Initializable {
     private void MenuProprietaire(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("MenuProprietaire.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event)  throws IOException  {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

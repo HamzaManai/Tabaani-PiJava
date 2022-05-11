@@ -10,13 +10,8 @@
 
 <AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.MenuBackController">
     <children>
-        <AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="775.0">
+        <AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="447.0">
             <children>
-                <Label layoutX="214.0" layoutY="26.0" prefHeight="43.0" prefWidth="197.0" textFill="#5c235b">
-                    <font>
-                        <Font name="System Bold Italic" size="29.0" />
-                    </font>
-                </Label>
                 <Label layoutX="313.0" layoutY="40.0" text="Bienvenue dans l'espace admin">
                     <font>
                         <Font name="System Bold" size="27.0" />
@@ -84,7 +79,7 @@
                           <Font name="Segoe UI Bold" size="15.0" />
                       </font>
                   </Button>
-                  <Button layoutX="676.0" layoutY="504.0" mnemonicParsing="false" text="Quitter" />
+                  <Button layoutX="686.0" layoutY="526.0" mnemonicParsing="false" text="Quitter" />
             </children>
         </AnchorPane>
     </children>

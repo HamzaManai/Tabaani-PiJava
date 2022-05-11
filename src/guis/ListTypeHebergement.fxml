@@ -6,31 +6,91 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.ListTypeHebergementController">
    <children>
-      <TableView fx:id="ListTypes" layoutX="16.0" layoutY="146.0" prefHeight="200.0" prefWidth="568.0">
-        <columns>
-          <TableColumn fx:id="nom_type" prefWidth="294.0" text="Nom Type" />
-          <TableColumn fx:id="modifier" prefWidth="138.0" text="Modifier" />
-            <TableColumn fx:id="supprimer" minWidth="1.0" prefWidth="135.0" text="Supprimer" />
-        </columns>
-      </TableView>
-      <Label layoutX="198.0" layoutY="44.0" text="List Type Hebergements" textAlignment="CENTER">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="429.0" layoutY="29.0" mnemonicParsing="false" onAction="#MenuTypeHebergement" prefHeight="31.0" prefWidth="164.0" text="Menu Type Hebergement" />
-      <Button layoutX="16.0" layoutY="29.0" mnemonicParsing="false" onAction="#MenuTypeHebergement" prefHeight="31.0" prefWidth="164.0" text="Menu Principale" />
-      <Button layoutX="33.0" layoutY="105.0" mnemonicParsing="false" onAction="#add" text="Add" />
-      <MenuButton layoutX="463.0" layoutY="105.0" mnemonicParsing="false" text="Trier Par :">
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#trierNom" text="Par Nom" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
+       
+       
+               <AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="912.0">
+            <children>
+                <Label layoutX="313.0" layoutY="40.0" text="Bienvenue dans l'espace admin">
+                    <font>
+                        <Font name="System Bold" size="27.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="-21.0" layoutY="-5.0" prefHeight="582.0" prefWidth="281.0" style="-fx-background-color: #01122C;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/Tabaani%20Full%20Logo.png" />
+                            </image>
+                        </ImageView>
+                      <ImageView blendMode="COLOR_DODGE" fitHeight="33.0" fitWidth="49.0" layoutX="41.0" layoutY="356.0" onMousePressed="#hebergementMenu" pickOnBounds="true">
+                          <image>
+                              <Image url="@../images/png-transparent-hotel-accommodation-hotel-text-logo-sign.png" />
+                          </image>
+                      </ImageView>
+                    </children>
+                </AnchorPane>
+                <Button id="gestUsers" layoutX="75.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Users">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestVoy" layoutX="75.0" layoutY="289.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Trip">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestHeb" fx:id="hebergement" layoutX="75.0" layoutY="346.0" mnemonicParsing="false" onAction="#hebergementMenu" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accomodation">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestEvent" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Blog ">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestCarte" layoutX="69.0" layoutY="467.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Event">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button id="gestUsers" layoutX="75.0" layoutY="172.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 100;" text="Accueil">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+
+                  <Button layoutX="742.0" layoutY="519.0" mnemonicParsing="false" text="Quitter" />
+             
+            <TableView fx:id="ListTypes" layoutX="299.0" layoutY="268.0" prefHeight="200.0" prefWidth="568.0">
+              <columns>
+                <TableColumn fx:id="nom_type" prefWidth="294.0" text="Nom Type" />
+                <TableColumn fx:id="modifier" prefWidth="138.0" text="Modifier" />
+                  <TableColumn fx:id="supprimer" minWidth="1.0" prefWidth="135.0" text="Supprimer" />
+              </columns>
+            </TableView>
+            <MenuButton layoutX="738.0" layoutY="215.0" mnemonicParsing="false" text="Trier Par :">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#trierNom" text="Par Nom" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+            <Button layoutX="326.0" layoutY="215.0" mnemonicParsing="false" onAction="#MenuTypeHebergement" prefHeight="31.0" prefWidth="164.0" text="Menu Type Hebergement" />
+            <Label layoutX="462.0" layoutY="139.0" text="List Type Hebergements" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="775.0" layoutY="137.0" mnemonicParsing="false" onAction="#add" text="Add" />
+            <Button layoutX="364.0" layoutY="506.0" mnemonicParsing="false" onAction="#MenuTypeHebergement" prefHeight="31.0" prefWidth="164.0" text="Menu Principale" />
+            </children>
+        </AnchorPane>
    </children>
 </AnchorPane>

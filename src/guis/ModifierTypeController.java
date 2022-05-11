@@ -18,8 +18,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import services.ServiceTypeHebergement;
 
@@ -38,6 +40,8 @@ public class ModifierTypeController implements Initializable {
     private TextField tfType;
     private TypeHebergement t;
     private String imgp;
+    @FXML
+    private Button hebergement;
 
     public void setA(TypeHebergement a) {
         this.t = a;
@@ -99,6 +103,24 @@ public class ModifierTypeController implements Initializable {
     @FXML
     private void MenuTypeHebergement(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("MenuTypeHebergement.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

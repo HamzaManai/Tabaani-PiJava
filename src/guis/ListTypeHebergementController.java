@@ -26,6 +26,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -56,6 +57,8 @@ public class ListTypeHebergementController implements Initializable {
     ObservableList<TypeHebergement> list = FXCollections.observableArrayList(
             stp.getAll()
     );
+    @FXML
+    private Button hebergement;
 
     /**
      * Initializes the controller class.
@@ -170,9 +173,27 @@ public class ListTypeHebergementController implements Initializable {
     @FXML
     private void trierNom(ActionEvent event) {
         nom_type.setCellValueFactory(new PropertyValueFactory<TypeHebergement, String>("nom_type_hbrg"));
-        list =stp.TrieNom();
+        list = stp.TrieNom();
 
         ListTypes.setItems(list);
+    }
+
+    @FXML
+    private void hebergementMenu(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void hebergementMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MenuBack.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
